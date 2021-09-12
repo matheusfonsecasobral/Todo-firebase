@@ -1,0 +1,27 @@
+@import 'src/shared/colors';
+
+button {
+  margin: 0px;
+  padding: 15px 20px;
+  background-color: $primary;
+  border: none;
+  font-size: 1.1em;
+  color: #fff;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  min-width: 150px;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: $secondary;
+  transition: 1s;
+}
+
+button:disabled,
+button[disabled] {
+  cursor: default;
+  opacity: 0.5;
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
+}

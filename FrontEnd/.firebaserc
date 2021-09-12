@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "to-do-cbb16": {
+      "hosting": {
+        "Todo-firebase": [
+          "to-do-cbb16"
+        ]
+      }
+    }
+  }
+}

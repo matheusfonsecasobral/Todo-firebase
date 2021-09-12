@@ -1,0 +1,21 @@
+@import 'src/shared/colors';
+
+textarea,
+input {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  border: none;
+  border-bottom: 5px solid $primary;
+  resize: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.error {
+  color: red;
+}

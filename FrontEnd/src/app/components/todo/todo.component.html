@@ -1,0 +1,16 @@
+<ul class="todos" *ngIf="todos">
+  <li *ngFor="let todo of todos">
+    <div *ngIf="!todo.done">
+      <a (click)="markAsDone(todo)" class="remove-item">
+        <i class="fa fa-check"></i>
+      </a>
+    </div>
+    <a [ngClass]="{'done' : todo.done}">
+      {{todo.title}} <br>
+      <small>{{todo.date | date: 'dd/MM/yyyy'}}</small>
+    </a>
+  </li>
+</ul>
+
+
+<h2 class="text-center" *ngIf="!todos.length">Você não possui nenhuma tarefa no momento.</h2>

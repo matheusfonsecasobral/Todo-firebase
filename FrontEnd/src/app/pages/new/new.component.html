@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+  <h1>Nova tarefa</h1>
+  <br>
+  <textarea formControlName="title" rows="1" placeholder="ex: Recarregar meu telefone"></textarea>
+  <small class="error">
+    <strong *ngIf="form.controls.title.invalid && form.controls.title.touched">Tarefa inválida</strong>
+  </small>
+  <br>
+  <h2>Quando você deseja realizar a tarefa?</h2>
+  <input type="date" formControlName="date">
+  <small class="error">
+    <strong *ngIf="form.controls.date.invalid && form.controls.date.touched">Data inválida</strong>
+  </small>
+  <br>
+  <br>
+  <p class="text-right">
+    <app-button (click)="submit()" [disabled]="form.invalid">
+      <i class="fa fa-save"> </i>
+      Criar tarefa
+    </app-button>
+  </p>
+</form>
